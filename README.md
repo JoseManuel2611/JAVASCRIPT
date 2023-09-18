@@ -1,6 +1,0 @@
-# JAVASCRIPT
-
-# IMAGEN DEL RESULTADO DEL LABORATORIO MEDIANTE CONSOLAD DEL NAVEGADOR
-![Captura de pantalla 2023-09-18 142912](https://github.com/JoseManuel2611/JAVASCRIPT/assets/143111909/36e142ee-6ff7-4532-857f-2ec447e381a4)
-![Captura de pantalla 2023-09-18 142816](https://github.com/JoseManuel2611/JAVASCRIPT/assets/143111909/16c2045a-fbf3-4110-9896-17029878e4a5)
-![Captura de pantalla 2023-09-18 142353](https://github.com/JoseManuel2611/JAVASCRIPT/assets/143111909/783331d6-a878-4c52-8c47-cf3bd6222d8e)
