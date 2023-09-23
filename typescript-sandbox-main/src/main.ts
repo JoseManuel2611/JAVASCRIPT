@@ -249,3 +249,93 @@ console.log(`- Ingredientes: ${mango}, ${queso}, ${lechuga}, ${cebolla}, ${pepin
 console.log("%c- Preparación: mezclar el mango en cubos con el queso feta desmenuzado, lechuga troceada, cebolla en juliana, pepino en rodajas y aceitunas. Aliñar con una vinagreta de limón y aceite de oliva.", estiloFuente);
 
 console.log("*************");
+
+
+//3.2 Typescript
+//Tipar el valor inicial
+let nameses = "Pepe";
+
+nameses = "Juan";
+console.log(nameses);
+
+//Meter una cagada
+/*Ocultar cagada
+nameses = 23;
+console.log(nameses);
+*/
+
+/*
+Nos saldrá error porque al asignarle inicialmente un string,
+Typescript no me va a dejar asignarle después un número,
+ya que no es del mismo tipo
+*/
+
+//Null y Strict
+let nombres : string | null = null //Con | indicamos que puede ser de tipo string o null
+nombres = "Rodolfo";
+console.log(nombres);
+
+//Meter una cagada
+/*Ocultar cagada
+nombres = 23;
+console.log(nombres);
+*/
+
+//Práctica Video y sesion ANY
+let year: any = null; //Any acepta todo tipo de dato (string, null o number)
+
+year = "No te lo digo";
+console.log(year);
+
+//Interfaces, sirve para decir que la variable es del tipo string, null o number...etc
+interface Cliente {
+    nombre: string;
+    edad: number;
+};
+
+const clientA : Cliente = {
+    nombre: "Agustin",
+    edad: 54,
+};
+
+const clientB : Cliente = {
+    nombre: "Angel",
+    edad: 34,
+};
+
+clientA.edad= 54;
+clientB.edad= 34; 
+console.log(clientA);
+console.log(clientB);
+
+/*
+- titulo
+- director
+-año
+
+variable Blade Runner / Ridley Scott / 1982
+variable Matrix / Lana Wachowski / 1999
+*/
+interface Films {
+    tit: string;
+    director: string;
+    año: number;
+};
+
+const peliA : Films = {
+    tit: "Blade Runner",
+    director: "Ridley Scott",
+    año: 1982,
+};
+const peliB : Films = {
+    tit: "Matrix",
+    director: "Lana Wachowski",
+    año: 1999,
+};
+
+peliA.año= 1982;
+peliB.año= 1999;
+console.log(peliA);
+console.log(peliB);
+
+
