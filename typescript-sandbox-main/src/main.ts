@@ -333,8 +333,6 @@ const peliB : Films = {
     año: 1999,
 };
 
-peliA.año= 1982;
-peliB.año= 1999;
 console.log(peliA);
 console.log(peliB);
 
