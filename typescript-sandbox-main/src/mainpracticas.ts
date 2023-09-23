@@ -185,6 +185,7 @@ vinagreta de limón y aceite de oliva.
 
 const estiloTitulo = "color: red; font-size: 18px";
 const estiloFuente = "font-style: italic";
+
 const lechuga = "🥬 Lechuga";
 const setas = "🍄 Setas";
 const alubias = "🫘 Alubias";
