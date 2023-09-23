@@ -11,15 +11,8 @@ console.log("Laboratorio Módulo 2");
 - Año de publicación: 1951
 */
 
-let libro = {
-    titulo: "The Catcher in the Rye",
-    autor: "J.D. Salinger",
-    añoPublicacion: 1951,
-};
+let nombre = 'Paco';
+let apellido = 'Perez';
 
-libro = {
-    titulo: "Fundación",
-};
-
-libro.añoPublicacion = 1952;
+console.log(nombre +  " " + apellido);
 
