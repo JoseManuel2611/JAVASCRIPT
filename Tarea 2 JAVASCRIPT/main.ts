@@ -53,3 +53,4 @@ console.log("%cQueen", estiloNombre,musicalRock, false);
 console.log("%cAC DC", estiloNombre,musicalHard, true);
 console.log("%cLudwig van Beethoven", estiloNombre,musicalClassic, false);
 console.log("%cThe Rolling Stones", estiloNombre,groupRock, true);
+ //TAREA 2 JAVASCRIPT MODULO 3//
