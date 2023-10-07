@@ -337,4 +337,6 @@ const peliB : Films = {
 console.log(peliA);
 console.log(peliB);
 
+/*Funciones
+*/
 
