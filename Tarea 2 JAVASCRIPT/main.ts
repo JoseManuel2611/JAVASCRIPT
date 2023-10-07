@@ -48,8 +48,6 @@ let groupRock : Groupname = {
     género: `${rock}`,
 };
 
-
-
 console.log("%cThe Beattles", estiloNombre, groupPop, true);
 console.log("%cQueen", estiloNombre,musicalRock, false);
 console.log("%cAC DC", estiloNombre,musicalHard, true);

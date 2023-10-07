@@ -337,6 +337,9 @@ const peliB : Films = {
 console.log(peliA);
 console.log(peliB);
 
-/*Funciones
+/*Funciones: Una función matemática es una regla que asigna a cada número de un conjunto llamado "dominio" un único
+número de otro conjunto llamado "contradominio". En otras palabras, una función toma un valor de entrada (el
+dominio) y produce un valor de salida (el contradominio) de acuerdo con una regla específica.
 */
 
+//f(x)= = 2x //
