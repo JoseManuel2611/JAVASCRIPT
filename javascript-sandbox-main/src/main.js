@@ -1,33 +1,17 @@
-// Sumar
-function sumar() {
-    // Leer los valores de los inputs
-    const sumando1 = document.getElementById("sumando1").value;
-    const sumando2 = document.getElementById("sumando2").value;
-    // Sumar los dos números
-    const resultado = parseInt(sumando1) + parseInt(sumando2);
-    // Mostrar el resultado
-    document.getElementById("resultado").innerHTML = resultado;
-    }
+//Carrusel de fotos y fat arrow
+function cambiarFotoPrincipal (idminiatura) {
+    const fotoPrincipal = document.getElementById("foto-principal");
+    const miniatura = document.getElementById(idminiatura);
 
-    const botonSumar = document.getElementById("sumar");
-    botonSumar.addEventListener("click", sumar);
-/* addEventListener nos permite asociar una función (un evento) a ese
-botón (es decir, cada vez que el usuario pulse el botón, 
-se ejecutará la función que le hemos indicado). */
-
-//Depurar
-function saludar () {
-    //Leer valores de inputs
-    const name = document.getElementById("name").value;
-    const surname = document.getElementById("surname").value;
-     //Concatenar los valores
-    const resultado1 = `¡Hola ${name} ${surname}!`;
-    //Mostrar el resultado
-    document.getElementById("resultado1").innerHTML = resultado1;
+    fotoPrincipal.src = miniatura.src;
 }
 
-const botonSaludar = document.getElementById("saludar");
-botonSaludar.addEventListener("click", saludar);
+const miniatura1 = document.getElementById("miniatura1");
+const miniatura2 = document.getElementById("miniatura2");
+const miniatura3 = document.getElementById("miniatura3");
+const miniatura4 = document.getElementById("miniatura4")
 
-//Carrusel de fotos y fat arrow
-sessionStorage
+miniatura1.addEventListener("click", () => cambiarFotoPrincipal("miniatura1"));
+miniatura2.addEventListener("click", () => cambiarFotoPrincipal("miniatura2"));
+miniatura3.addEventListener("click", () => cambiarFotoPrincipal("miniatura3"));
+miniatura4.addEventListener("click", () => cambiarFotoPrincipal("miniatura4"));
