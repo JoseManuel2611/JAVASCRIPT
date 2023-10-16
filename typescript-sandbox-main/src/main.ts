@@ -343,3 +343,30 @@ dominio) y produce un valor de salida (el contradominio) de acuerdo con una regl
 */
 
 //f(x)= = 2x //
+
+//Funciones y tipos
+/* function areaDelCirculo(radio: number): number {
+    return 2 * Math.PI * radio * radio;
+}
+
+const area: number = areaDelCirculo(2);
+console.log(area);
+*/
+
+//typar funcion con Fat arrow
+const areaDelCirculo = (radio: number):number => 2 * Math.PI * radio * radio;
+
+const area: number = areaDelCirculo(2);
+console.log(area);
+
+//typar funcion area cuadrado
+/*
+function areaDelCuadrado(lado) {
+    return lado*lado;
+}
+
+console.log(areaDelCuadrado)("10");
+*/
+const areaDelCuadrado = (lado: number): number => lado * lado;
+
+console.log(areaDelCuadrado(15));
