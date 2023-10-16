@@ -367,6 +367,93 @@ function areaDelCuadrado(lado) {
 
 console.log(areaDelCuadrado)("10");
 */
+//Función tipada
 const areaDelCuadrado = (lado: number): number => lado * lado;
 
 console.log(areaDelCuadrado(15));
+
+//Void
+
+/*
+ esta función no devuelve nada (lo único que hace es pintar console.log y no devuelve ningún valor,
+no le hace falta), si lo dejamos tal cual y ponemos el ratón encima, podemos ver que tiene el valor de retorno
+void, esto quiere decir que es vacío no devuelve nada, podemos también tiparlo explícitamente:
+*/
+
+function pintaReceta(titulo: string, ingredientes: string, preparacion: string) :void {
+ const estiloTitulo = "color:blue; font-size:18px";
+ // Título ensalada
+ console.log(`%c${titulo}`, estiloTitulo);
+ // Ingredientes
+ console.log(`Ingredientes: ${ingredientes}`);
+ // Preparación
+ console.log(`Preparación: ${preparacion}`);
+}
+pintaReceta(
+ "Ensalada de alubias con aguacate y huevo",
+ `- Ingredientes: ${alubias}, ${aguacate}, ${huevo}, ${cebolla}, ${tomate}, ${lechuga}.`,
+ "Preparación: cocer las alubias y dejar enfriar. Mezclar con aguacate en cubos, huevo cocido en rodajas, cebolla en juliana, tomate en cubos y lechuga troceada. Aliñar con aceite de oliva y vinagre."
+);
+
+//Tipado DOM
+function sumar() {
+    // Leer los valores de los inputs
+    const sumando1 = (document.getElementById("sumando1") as HTMLInputElement).value;
+    const sumando2 = (document.getElementById("sumando2") as HTMLInputElement).value;
+    // Sumar los dos números
+    const resultado = parseInt(sumando1) + parseInt(sumando2);
+    // Mostrar el resultado
+    const resultadoElement = document.getElementById("resultado");
+    
+    if(resultadoElement !== null && resultadoElement !== undefined) {
+        resultadoElement.innerHTML = resultado.toString();
+    }
+}
+    const botonSumar = document.getElementById("sumar");
+    
+    if(botonSumar !== null && botonSumar !== undefined) {
+        botonSumar.addEventListener("click", sumar);
+    }
+
+//Imagenes
+function cambiarFotoPrincipal(idMiniatura: string): void {
+    const fotoPrincipal = document.getElementById("foto-principal");
+    const miniatura = document.getElementById(idMiniatura);
+    if (
+    fotoPrincipal !== null &&
+    fotoPrincipal !== undefined &&
+    miniatura !== null &&
+    miniatura !== undefined
+    )
+    if (fotoPrincipal instanceof HTMLImageElement &&
+        miniatura instanceof HTMLImageElement) 
+        {
+        fotoPrincipal.src = miniatura.src
+    }
+    }
+
+const miniatura1 = document.getElementById("miniatura1");
+const miniatura2 = document.getElementById("miniatura2");
+const miniatura3 = document.getElementById("miniatura3");
+const miniatura4 = document.getElementById("miniatura4")
+
+if(miniatura1 !== undefined && miniatura1 !==null) {
+    miniatura1.addEventListener("click", () =>
+    cambiarFotoPrincipal("miniatura1")
+    );
+}
+if(miniatura2 !== undefined && miniatura2 !==null) {
+    miniatura2.addEventListener("click", () =>
+    cambiarFotoPrincipal("miniatura2")
+    );
+}
+if(miniatura3 !==undefined && miniatura3 !==null) {
+    miniatura3.addEventListener("click", () =>
+    cambiarFotoPrincipal("miniatura3")
+    );
+}
+if(miniatura4 !==undefined && miniatura4 !==null) {
+    miniatura4 .addEventListener("click", () =>
+    cambiarFotoPrincipal("miniatura4")
+    );
+}
