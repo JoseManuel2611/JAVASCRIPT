@@ -457,3 +457,39 @@ if(miniatura4 !==undefined && miniatura4 !==null) {
     cambiarFotoPrincipal("miniatura4")
     );
 }
+
+//Instanceof - Typeof
+/*
+- Typeof es un operador unitario que devuelve una cadena
+de texto que representa el tipo de dato de una variable
+- Instanceof es un operador binario, osea, trabaja con dos
+elementos, uno es el objeto y otro es el tipo contra el que
+queremos comparar
+*/
+typeof "Hola"; // Devuelve "string"
+console.log(typeof "Hola");
+typeof 42; // Devuelve "number"
+console.log(typeof 42);
+typeof true; // Devuelve "boolean"
+console.log(typeof true);
+typeof undefined; // Devuelve "undefined"
+console.log(typeof undefined);
+typeof null; // Devuelve "object" (esto es un error conocido en JS)
+console.log(typeof null);
+typeof {}; // Devuelve "object"
+console.log(typeof {});
+typeof []; // Devuelve "object"
+console.log(typeof []);
+typeof function () {}; // Devuelve "function"
+console.log(typeof function () {});
+
+class Cliente {
+    nombre: string = "";
+}
+
+let miNumero: any = 2;
+let miObject: Cliente = new Cliente;
+
+console.log(miNumero instanceof Object); //false
+console.log(miObject instanceof Cliente); //false
+
