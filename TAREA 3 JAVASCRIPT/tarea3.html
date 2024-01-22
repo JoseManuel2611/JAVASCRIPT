@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./styleTarea.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div class="turno-display">
-      <h1 class="numero-turno">01</h1>
-      <p class="texto-turno">Por favor, acérquese al mostrador</p>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheets" href="./styleTarea.css">
+  <title>Pantalla de Turno</title>
+</head>
+<body>
+  <div id="turno-display">00</div>
+  <button onclick="anteriorTurno()">Anterior</button>
+  <button onclick="siguienteTurno()">Siguiente</button>
+  <button onclick="resetTurno()">Reset</button>
+  <br>
+  <input type="text" id="input-turno" placeholder="Nuevo Turno">
+  <button onclick="cambiarTurno()">Cambiar Turno</button>
+
+  <script src="/TAREA 3 JAVASCRIPT/funciones.js"></script>
+</body>
 </html>
