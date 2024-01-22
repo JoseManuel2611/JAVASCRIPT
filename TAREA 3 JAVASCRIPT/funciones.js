@@ -1,33 +1,30 @@
 
-    let turno = 0;
+let turno = 1; // Puedes inicializar el turno como desees
 
-    function actualizarDisplay() {
-      // Formatear el turno a dos dígitos usando padStart
-      const turnoFormateado = turno.toString().padStart(2, '0');
-      document.getElementById('turno-display').textContent = turnoFormateado;
-      document.getElementById('input-turno').value = turnoFormateado;
-    }
+function actualizarTurno() {
+  const turnoFormateado = turno.toString().padStart(2, '0');
+  document.querySelector('.numero-turno').textContent = turnoFormateado;
+}
 
-    function siguienteTurno() {
-      turno++;
-      actualizarDisplay();
-    }
+function siguienteTurno() {
+  turno++;
+  actualizarTurno();
+}
 
-    function anteriorTurno() {
-      turno = Math.max(0, turno - 1); // Asegurarse de que el turno no sea negativo
-      actualizarDisplay();
-    }
+function anteriorTurno() {
+  turno = Math.max(1, turno - 1); // Asegurarse de que el turno no sea menor que 1
+  actualizarTurno();
+}
 
-    function resetTurno() {
-      turno = 0;
-      actualizarDisplay();
-    }
+function cambiarTurno() {
+  const nuevoTurno = parseInt(document.getElementById('input-turno').value, 10);
+  if (!isNaN(nuevoTurno) && nuevoTurno > 0) {
+    turno = nuevoTurno;
+    actualizarTurno();
+  } else {
+    alert('Ingrese un valor válido para el turno.');
+  }
+}
 
-    function cambiarTurno() {
-      const nuevoTurno = parseInt(document.getElementById('input-turno').value, 10) || 0;
-      turno = nuevoTurno;
-      actualizarDisplay();
-    }
-
-    //Inicializar la pantalla con el turno actualizado
-    actualizarDisplay();
+// Inicializar la pantalla con el turno actualizado
+actualizarTurno();
