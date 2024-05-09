@@ -1,4 +1,13 @@
-turno-display {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.turno-display {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,4 +30,44 @@ turno-display {
   font-weight: bold;
   margin: 0;
   text-align: center;
+}
+
+.controles {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-anterior,
+.btn-siguiente,
+.btn-reiniciar,
+.btn-ir-turno {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-anterior:hover,
+.btn-siguiente:hover,
+.btn-reiniciar:hover,
+.btn-ir-turno:hover {
+  background-color: #eee;
+}
+
+.ingreso-turno {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-turno {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80px;
+}
+
+.btn-ir-turno {
+  margin-left: 10px;
 }

@@ -3,29 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./styleTarea.css" />
+    <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>Marcador de Turnos</title>
   </head>
   <body>
-    <div class="turno-display">
-      <h1 class="numero-turno">01</h1>
-      <p class="texto-turno">Por favor, acérquese al mostrador</p>
+    <div class="container">
+      <div class="turno-display">
+        <h1 class="numero-turno">01</h1>
+        <p class="texto-turno">Por favor, acérquese al mostrador</p>
+      </div>
+      <div class="controles">
+        <button class="btn-anterior">Anterior</button>
+        <button class="btn-siguiente">Siguiente</button>
+        <button class="btn-reiniciar">Reiniciar</button>
+      </div>
+      <div class="ingreso-turno">
+        <input type="number" class="input-turno" min="1" />
+        <button class="btn-ir-turno">Ir a turno</button>
+      </div>
     </div>
-
-    <!-- Botones de Siguiente y Atrás -->
-    <div>
-      <button onclick="anteriorTurno()">Atrás</button>
-      <button onclick="siguienteTurno()">Siguiente</button>
-    </div>
-
-    <!-- Caja de texto y botón para cambiar el turno -->
-    <div>
-      <input type="text" id="input-turno" placeholder="Nuevo Turno">
-      <button onclick="cambiarTurno()">Cambiar Turno</button>
-    </div>
-
-    <script src="./funciones.ts"></script>
-    </body>
+    <script type="module" src="/src/funciones.ts"></script>
+  </body>
 </html>
 

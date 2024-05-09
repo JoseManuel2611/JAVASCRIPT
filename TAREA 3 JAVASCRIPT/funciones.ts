@@ -1,37 +1,21 @@
-let turno: number = 1; // Puedes inicializar el turno como desees
+// Variables
+let turnoActual = 1;
+const numeroTurnoElement = document.querySelector('.numero-turno') as HTMLHeadingElement; // Use type assertion for better type safety
+const textoTurnoElement = document.querySelector('.texto-turno') as HTMLParagraphElement; // Use type assertion for better type safety
+const inputTurnoElement = document.querySelector('.input-turno') as HTMLInputElement; // Use type assertion for better type safety
 
-function actualizarTurno(): void {
-  const turnoFormateado: string = turno.toString().padStart(2, '0');
-  const numeroTurnoElement = document.querySelector('.numero-turno');
-  if (numeroTurnoElement) {
-    numeroTurnoElement.textContent = turnoFormateado;
-  }
+// Functions
+function actualizarTurno() {
+  // Format the turnoActual with two digits (Challenge)
+  const turnoFormateado = turnoActual.toString().padStart(2, '0');
+
+  // Update the content of the elements
+  numeroTurnoElement.textContent = turnoFormateado;
+  textoTurnoElement.textContent = "Por favor, acérquese al mostrador"; // Update the message if needed
 }
 
-function siguienteTurno(): void {
-  turno++;
-  actualizarTurno();
-}
+// Event Listeners (assuming you have them defined elsewhere)
+// Attach event listeners to buttons for functionality
 
-function anteriorTurno(): void {
-  turno--;
-  if (turno < 1) {
-    turno = 1;
-  }
-  actualizarTurno();
-}
-
-function cambiarTurno(): void {
-  const inputTurnoElement = document.getElementById('input-turno') as HTMLInputElement;
-  const nuevoTurno: string = inputTurnoElement.value;
-  const parsedTurno: number = parseInt(nuevoTurno, 10);
-  if (!isNaN(parsedTurno) && parsedTurno > 0) {
-    turno = parsedTurno;
-    actualizarTurno();
-  } else {
-    alert('Ingrese un valor válido para el turno.');
-  }
-}
-
-// Inicializar la pantalla con el turno actualizado
-actualizarTurno();
+// Call actualizarTurno on page load using DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', actualizarTurno);
